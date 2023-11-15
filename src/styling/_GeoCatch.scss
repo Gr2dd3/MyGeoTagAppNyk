@@ -1,0 +1,65 @@
+.geocatch-container {
+
+    .geocatch-header {
+        display: flex;
+        margin: 3rem 0 3rem 0;
+        padding: 1rem;
+        background-color: $color-secondary;
+        max-width: 30vw;
+    }
+
+    .geocatch-map-wrapper {
+        border-radius: 5px;
+        max-width: 95vw;
+        height: 95vh;
+
+        .geocatch-image-map {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .geocatch-points {
+        background-color: $color-secondary;
+        width: 120px;
+        padding: 1rem;
+    }
+
+    .geocatch-directions-wrapper {
+        display: flex;
+
+        .geocatch-directions-link {
+            text-decoration: none;
+            color: $color-primary;
+
+            &:hover {
+                transition: color 0.2s;
+                color: $color-secondary;
+            }
+
+            .geocatch-direction {
+                background-color: $color-directions;
+                padding: .75rem;
+            }
+        }
+    }
+}
+
+@media(max-width: 778px) {
+    .geocatch-container {
+        display: block;
+        width: 98%;
+        padding-bottom: 5rem;
+        
+        .geocatch-header {
+            margin: 3rem 0 2rem 0;
+            padding: 1rem;
+            max-width: 60vw;
+            font-size: 1rem;
+        }
+
+        .geocatch-map-wrapper {
+            height: 95vh;
+        }
+    }
+}

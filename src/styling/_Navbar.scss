@@ -1,0 +1,107 @@
+.navbar-container {
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    // box-shadow: 0 0 7px 1px black;
+    @include boxShadowStyle();
+    
+    a {
+        text-decoration: none;
+        font-size: xx-large;
+        font-weight: 2rem;
+    }
+
+    .navbar-header-section {
+        padding: 3rem 0 3rem 3rem;
+        background-color: $color-primary;
+        min-height: 70px;
+        z-index: 2;
+        @include boxShadowStyle();
+        
+        .navbar-header {
+            font-size: 3rem;
+            font-weight: 5rem;
+            color: $color-bright;
+            text-shadow: 2px 2px 3px $color-secondary;
+
+            &:hover {
+            text-shadow: 3px 3px 10px $color-secondary;
+            transition: text-shadow 0.2s;
+
+            }
+        }
+    }
+
+    .navbar-section {
+        background-image: url(../../public/images/st-nicolai-torget-nykoping.jpg);
+        background-repeat: none;
+        background-size: cover;
+        height: 100%;
+        object-fit: cover;
+        margin-top: -160px;
+        .nav-links {
+            position: absolute;
+            top: 933px;
+            left: 0;
+            background-color: $color-primary;
+            height:fit-content;
+            padding: 1rem 2rem 1rem 2rem;
+            border-radius: 0 5px 0 0;
+            z-index: 2;
+            
+            .nav-link {
+                color: $color-bright;
+                margin-right: 2rem;
+                &:hover {
+                    text-shadow: 3px 3px 10px $color-secondary;
+                    transition: text-shadow 0.2s;
+                    }
+            }
+        }
+    }
+}
+
+@media(max-width: 778px) {
+    .navbar-container {
+        width: 100vw;
+        height: 400px;
+        
+        a {
+            font-size: large;
+        }
+        .navbar-header-section {
+            padding: 1.5rem 0 0.5rem 0.5rem;
+            background-color: $color-primary;
+            min-height: 50px;
+            z-index: 2;
+            @include boxShadowStyle();
+        
+            .navbar-header {
+            padding: 2rem .5rem 0 .25rem;
+            font-size: 2rem;
+            }
+        }
+
+        .navbar-section {
+            background-repeat: none;
+            background-size: cover;
+            height: 100%;
+            object-fit: cover;
+            margin-top: -50px;
+            
+            .nav-links {
+                position: absolute;
+                top: 347.5px;
+                left: 0;
+                padding: 1rem 1rem 1rem 2rem;
+                border-radius: 0 5px 0 0;
+                max-width: 83vw;
+                .nav-link {
+                    padding-right: 1rem;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+}
